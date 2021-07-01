@@ -1,0 +1,88 @@
+
+<!doctype html>
+
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1.0, user-scalable=yes">
+  <meta name="theme-color" content="#4F7DC9">
+  <meta charset="UTF-8">
+  <title>MFA設定手順</title>
+  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Code+Pro:400|Roboto:400,300,400italic,500,700|Roboto+Mono">
+  <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://storage.googleapis.com/codelab-elements/codelab-elements.css">
+  <style>
+    .success {
+      color: #1e8e3e;
+    }
+    .error {
+      color: red;
+    }
+  </style>
+</head>
+<body>
+  <google-codelab-analytics gaid="UA-49880327-14"></google-codelab-analytics>
+  <google-codelab codelab-gaid="UA-99999999-1"
+                  id="ms-mfa"
+                  title="MFA設定手順"
+                  environment="web"
+                  feedback-link="https://www.sra.co.jp">
+    
+      <google-codelab-step label="事前準備" duration="0">
+        <p>Microsoft の組織アカウントでMFA認証を利用する場合は、事前に以下を実施する。</p>
+<ul>
+<li>テナント管理者へ連絡して、利用希望ユーザのMFA有効化を依頼する。</li>
+<li>MFAで利用する携帯電話番号、またはスマートフォン用認証アプリ「Microsoft Authenticator」を用意する。<br><a href="https://play.google.com/store/apps/details?id=com.azure.authenticator&hl=ja&gl=US" target="_blank">Google Play</a><br><a href="https://apps.apple.com/jp/app/microsoft-authenticator/id983156458" target="_blank">App Store</a></li>
+</ul>
+<aside class="warning"><p>注意：MVNOの場合、Microsoft からのSMSが通知されないケースがある。また認証アプリを利用する場合でも、万一の復旧用の携帯電話番号を求められる。</p>
+</aside>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="MFAの設定" duration="0">
+        <h2 is-upgraded><strong>Microsoft 認証画面でMFAの設定を行う</strong></h2>
+<p>Microsoft 認証を利用するサービスへログインする（例では<a href="https://portal.azure.com/" target="_blank">Azure Portal </a>を利用）。</p>
+<p>会社メールアドレスでサインインし、パスワードを入力する。</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\e54998474959e314.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img\\b2aa89b72300bd1a.png"></p>
+<p>「次へ」を押下する。</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\629bec1d33c9bae6.png"></p>
+<p>MFA設定画面が表示されるので、利用方法を選択する。<br>（以降の例では認証アプリを選択）</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\29ff0cdfb50efa38.png"></p>
+<ul>
+<li>認証用携帯電話<br>テキストメッセージ（SMS）または電話による連絡が選択できる。</li>
+<li>会社電話<br>おススメしない。</li>
+<li>モバイルアプリ<br>Microsoft Authenticator によるワンタイムパスコード認証。30秒ごとの自動生成、または都度通知のどちらかが選択できる。</li>
+</ul>
+<p><br>認証アプリを選択し、「セットアップ」を押下してアプリをセットアップする。</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\8de5815fe71590a4.png"></p>
+<p>手元のスマートフォン上の「Microsoft Authenticator」を開き、右上の＋を押下して「職場または学校アカウント」を選択し、「QRコードをスキャン」を選択して画面のQRコードを読みこむ。</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\2d7af07cf4f3c993.png"></p>
+<p class="image-container"><img style="width: 624.00px" src="img\\269fe551c8192b7d.png"></p>
+<p>QRコードの読み取りが成功し、認証アプリのセットアップが成功したら「次へ」を押下する。<br><img style="width: 624.00px" src="img\\7b45064117f15760.png"></p>
+<p>認証アプリ上に表示されているワンタイムパスコードを入力する。<br>（この間にセッションがタイムアウトした場合は、再度パスワードを入力することでこの画面に戻れる）</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\35978b0d10323572.png"></p>
+<p>認証アプリにアクセスできない場合の回復手段として携帯電話番号を設定する。</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\520de84fa6a95103.png"></p>
+
+
+      </google-codelab-step>
+    
+      <google-codelab-step label="MFA認証（認証アプリ）" duration="0">
+        <p>メールアドレス、パスワード入力後に、コードの入力を求められるので、認証アプリのワンタイム パスコードを入力する。<br><img style="width: 624.00px" src="img\\ea5322bcdf37994b.png"></p>
+<p>会社PC等でセッションをキープしておきたい場合は、「はい」を選択する。<br>（MFA認証のセッション有効期間中は再入力不要となる）</p>
+<p class="image-container"><img style="width: 624.00px" src="img\\3d2de4309dca6116.png"></p>
+
+
+      </google-codelab-step>
+    
+  </google-codelab>
+
+  <script src="https://storage.googleapis.com/codelab-elements/native-shim.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/custom-elements.min.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/prettify.js"></script>
+  <script src="https://storage.googleapis.com/codelab-elements/codelab-elements.js"></script>
+  <script src="//support.google.com/inapp/api.js"></script>
+
+</body>
+</html>

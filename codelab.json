@@ -1,0 +1,40 @@
+{
+  "environment": "web",
+  "format": "html",
+  "prefix": "https://storage.googleapis.com",
+  "mainga": "UA-49880327-14",
+  "updated": "2021-07-01T09:05:10Z",
+  "id": "ms-mfa",
+  "duration": 0,
+  "title": "MFA設定手順",
+  "authors": "Hisaaki URAGO",
+  "summary": "Microsoft の「組織または」アカウントでのMFA設定手順",
+  "source": "1oIMboTR63YwiiWkiHbIdvNPbRJNuSKXM8MLTqsdOzkc",
+  "theme": "web",
+  "status": [
+    "published"
+  ],
+  "category": [
+    "Web"
+  ],
+  "tags": [
+    "cds17",
+    "chrome-dev-summit-2016",
+    "devfest18",
+    "gdd17",
+    "io2016",
+    "io2017",
+    "io2018",
+    "io2019",
+    "jsconfeu",
+    "kiosk",
+    "pwa-dev-summit",
+    "pwa-roadshow",
+    "tag-web",
+    "typtwd17",
+    "web"
+  ],
+  "feedback": "https://www.sra.co.jp",
+  "ga": "UA-99999999-1",
+  "url": "ms-mfa"
+}
